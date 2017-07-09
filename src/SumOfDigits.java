@@ -15,6 +15,36 @@ public class SumOfDigits {
 		
 		Scanner sc=new Scanner(System.in);
 		
+		int n=sc.nextInt();
+		int [] digits=new int[3*n];
+		int [] modifs=new int[n];
+		
+		
+		
+		for(int i=0;i<3*n;i++){
+			digits[i]=sc.nextInt();
+		}
+		
+		
+		
+		for(int i=0;i<3*n-2;i+=3){
+			int a=0;
+			int sum=0;		
+			
+			a=digits[i]*digits[i+1]+digits[i+2];
+			while(a>0){
+						int e=a%10;
+				sum=sum+e;
+				a=a/10;
+			}
+			System.out.print(sum+" ");
+			
+		}
+		
+		
+		
+		
+		
 		
 		
 		
